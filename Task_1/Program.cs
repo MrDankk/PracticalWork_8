@@ -9,10 +9,10 @@ namespace Task_1
         static void Main()
         {
             int listCount = 100,
-                randomTo = 0,
-                randomFrom = 101,
-                removeTo = 25, 
-                removeFrom = 50;
+                randomFrom = 0,
+                randomTo = 101,
+                removeFrom = 25, 
+                removeTo = 50;
 
             List<int> rundomNubmerList = new List<int>();
             CollectionFilling(rundomNubmerList,listCount,randomTo,randomFrom);
@@ -22,7 +22,7 @@ namespace Task_1
 
             RemoveInteger(rundomNubmerList,removeTo,removeFrom);
 
-            Console.WriteLine($"\n\n После удаления диапазона чисел от {removeTo} до {removeFrom}:\n");
+            Console.WriteLine($"\n\n После удаления диапазона чисел от {removeFrom} до {removeTo}:\n");
             Print(rundomNubmerList);
 
             Console.ReadKey();
@@ -41,7 +41,7 @@ namespace Task_1
 
             for (int i = 0; i < count; i++)
             {
-                int randNumber = rand.Next(randomTo, randomFrom);
+                int randNumber = rand.Next(randomFrom, randomTo);
                 list.Add(randNumber);
             }
         }
@@ -56,7 +56,7 @@ namespace Task_1
         {
             List<int> toRemoveList = new List<int>();
 
-            for (int i = removeTo; i <= removeFrom; i++)
+            for (int i = removeFrom; i <= removeTo; i++)
             {
                 toRemoveList.Add(i);
             }
