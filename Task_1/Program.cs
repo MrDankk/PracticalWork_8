@@ -15,12 +15,12 @@ namespace Task_1
                 removeTo = 50;
 
             List<int> rundomNubmerList = new List<int>();
-            CollectionFilling(rundomNubmerList,listCount,randomTo,randomFrom);
+            CollectionFilling(rundomNubmerList,listCount, randomFrom, randomTo);
 
             Console.WriteLine("Изначальный набор чисел:\n");
             Print(rundomNubmerList);
 
-            RemoveInteger(rundomNubmerList,removeTo,removeFrom);
+            RemoveInteger(rundomNubmerList, removeFrom, removeTo);
 
             Console.WriteLine($"\n\n После удаления диапазона чисел от {removeFrom} до {removeTo}:\n");
             Print(rundomNubmerList);
@@ -35,7 +35,7 @@ namespace Task_1
         /// <param name="count">Количесво элементов</param>
         /// <param name="randomTo">Нижняя границы чисел</param>
         /// <param name="randomFrom">Верхняя граница чисел</param>
-        static void CollectionFilling(List<int> list,int count,int randomTo,int randomFrom)
+        static void CollectionFilling(List<int> list,int count, int randomFrom, int randomTo)
         {
             Random rand = new Random();
 
@@ -52,7 +52,7 @@ namespace Task_1
         /// <param name="list">Коллекция</param>
         /// <param name="removeTo">Нижний диапозон</param>
         /// <param name="removeFrom">Верхний диапозон</param>
-        static void RemoveInteger(List<int> list, int removeTo, int removeFrom)
+        static void RemoveInteger(List<int> list, int removeFrom, int removeTo)
         {
             List<int> toRemoveList = new List<int>();
 
